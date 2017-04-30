@@ -1,0 +1,60 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../mdb-radio-list/mdb-radio-list.html">
+<link rel="import" href="../paper-radio-button/paper-radio-button.html">
+
+<!--
+`mdb-confirm-concept`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="mdb-confirm-concept">
+  <template>
+    <style>
+       :host {
+        display: block;
+      }
+      
+       :host paper-radio-button {
+        width: 50px;
+        text-align: center;
+      }
+    </style>
+    <div>
+      <mdb-radio-list size="small" selected="{{confirmation}}">
+        <paper-radio-button name="yes">YES</paper-radio-button>
+        <paper-radio-button name="no">NO</paper-radio-button>
+        <paper-radio-button name="maybe">MAYBE</paper-radio-button>
+      </mdb-radio-list>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'mdb-confirm-concept',
+
+      properties: {
+        name: {
+          type: String,
+          value: 'mdb-confirm-concept',
+        },
+
+        property: String,
+
+        recommendation: {
+          type: Number,
+          value: 0,
+          notify: true
+        },
+
+        confirmation: {
+          type: String,
+          value: 'no'
+        }
+      },
+
+    });
+  </script>
+</dom-module>
