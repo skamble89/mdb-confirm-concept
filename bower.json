@@ -3,7 +3,7 @@
   "main": "mdb-confirm-concept.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
-    "mdb-radio-list": "git://github.com/skamble89/mdb-radio-list.git"
+    "mdb-recommended-concepts": "git://github.com/skamble89/mdb-recommended-concepts.git"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

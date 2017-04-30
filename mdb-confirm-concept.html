@@ -1,6 +1,5 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../mdb-radio-list/mdb-radio-list.html">
-<link rel="import" href="../paper-radio-button/paper-radio-button.html">
+<link rel="import" href="../mdb-recommended-concepts/mdb-concept-recommendation.html">
 
 <!--
 `mdb-confirm-concept`
@@ -15,19 +14,8 @@
        :host {
         display: block;
       }
-      
-       :host paper-radio-button {
-        width: 50px;
-        text-align: center;
-      }
     </style>
-    <div>
-      <mdb-radio-list size="small" selected="{{confirmation}}">
-        <paper-radio-button name="yes">YES</paper-radio-button>
-        <paper-radio-button name="no">NO</paper-radio-button>
-        <paper-radio-button name="maybe">MAYBE</paper-radio-button>
-      </mdb-radio-list>
-    </div>
+    <mdb-concept-recommendation property="{{property}}" recommendation-factor="{{recommendationFactor}}"></mdb-concept-recommendation>
   </template>
 
   <script>
@@ -43,10 +31,9 @@
 
         property: String,
 
-        recommendation: {
+        recommendationFactor: {
           type: Number,
-          value: 0,
-          notify: true
+          value: 0
         },
 
         confirmation: {
